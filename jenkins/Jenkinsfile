@@ -26,7 +26,7 @@ pipeline {
             steps{
                 script{
                     dir('terraform'){
-                         sh 'terraform validate'
+                         sh 'terraform plan'
                     }
                 }
             }
