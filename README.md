@@ -76,8 +76,12 @@ Create a Directory for Terraform Scripts
      
 # Step 7 Trigger the Jenkins Pipeline
   
-   - We can manually trigger the pipeline job in Jenkins 
+   - We can manually trigger the pipeline job in Jenkins
+   - This creates an eks cluster
 >>>Verify Deployment
+   - Interacting with EKS cluster
+       aws eks update-kubeconfig --region us-east-1 --name eks-demo-cluster1 #update the kubeconfig
+       kubectl run nginx --image=nginx  #to create nginx pod
     -Check Kubernetes Pods
      kubectl get pods
 >>>Access the Application
