@@ -39,7 +39,7 @@ module "eks" {
       capacity_type  = "SPOT"
 
       tags = {
-        ExtraTag = "Hi, this is mandatory-task"
+        ExtraTag = "mandatory-task"
       }
     }
   }
