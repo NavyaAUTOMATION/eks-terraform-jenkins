@@ -1,0 +1,23 @@
++---------------------+      +---------------------+      +-----------------+
+|                     |      |                     |      |                 |
+|  Code Repository    |      |       Jenkins       |      |       AWS       |
+|  (GitHub/GitLab)    |      |     (CI/CD Server)  |      |                 |
+|                     |      |                     |      |                 |
++---------------------+      +---------------------+      +-----------------+
+          |                          |                        |
+          |                          |                        |
+          |                          |                        |
+          |                          |                        |
+          V                          V                        V
++---------------------+      +---------------------+      +-----------------+
+|                     |      |   Checkout Code     |      |                 |
+|  Store Terraform    |----->|   Initialize Terraform |----->| Create EKS     |
+|  configuration files|      |   Plan Terraform    |      | cluster and    |
+|                     |      |   Apply Terraform   |      | related resources|
++---------------------+      +---------------------+      +-----------------+
+          ^                          |
+          |                          |
+          |                          |
+          +--------------------------+
+                Trigger Jenkins Job
+                (Manual/Webhook)
